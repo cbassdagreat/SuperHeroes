@@ -61,7 +61,7 @@ public class ListFragment extends Fragment {
 
         viewModel.getMiSuperHeroes().observe(getViewLifecycleOwner(), superHeroes -> {
             Log.i("SUPERHEROES",superHeroes.toString());
-            adapter.setList(superHeroes.getSuperHeroes());
+            adapter.setList(superHeroes);
         });
 
 

@@ -15,454 +15,488 @@
     android:layout_height="match_parent"
     tools:context=".ui.DetailFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#032383">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/tvTituloDetail"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="#EA1717"
-            android:fontFamily="@font/aclonica"
-            android:gravity="center_vertical"
-            android:text="App de Súper Héroes"
-            android:textAlignment="center"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.004"
-            tools:ignore="RtlCompat" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cvDetail"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_margin="10dp"
-            app:cardBackgroundColor="#5BB9E3"
-            app:cardCornerRadius="30dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.157"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvTituloDetail"
-            app:layout_constraintVertical_bias="0.0">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#032383">
 
+                <TextView
+                    android:id="@+id/tvTituloDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#EA1717"
+                    android:fontFamily="@font/aclonica"
+                    android:gravity="center_vertical"
+                    android:text="@string/tituloApp"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.004"
+                    tools:ignore="RtlCompat" />
 
-            <TextView
-                android:id="@+id/tvWeightData"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="300dp"
-                android:layout_marginTop="340dp"
-                android:hint="440 kg"
-                android:textSize="14sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/tvHairData"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="120dp"
-                android:layout_marginTop="370dp"
-                android:hint="No Hair"
-                android:textSize="14sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/tvEyeData"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="300dp"
-                android:layout_marginTop="370dp"
-                android:hint="Yellow"
-                android:textSize="14sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/tvHeightData"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="300dp"
-                android:layout_marginTop="310dp"
-                android:hint="203 cm"
-                android:textSize="14sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/tvWeight"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="190dp"
-                android:layout_marginTop="340dp"
-                android:text="Weight:"
-                android:textSize="14sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/tvHair"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="370dp"
-                android:text="Hair:"
-                android:textSize="14sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/tvEye"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="190dp"
-                android:layout_marginTop="370dp"
-                android:text="Eye Color:"
-                android:textSize="14sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/tvHeight"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="190dp"
-                android:layout_marginTop="310dp"
-                android:text="Height:"
-                android:textSize="14sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/tvCombatData"
-                android:layout_width="28dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="300dp"
-                android:layout_marginTop="240dp"
-                android:hint="38"
-                android:textAlignment="center" />
-
-            <TextView
-                android:id="@+id/tvPowerData"
-                android:layout_width="28dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="300dp"
-                android:layout_marginTop="210dp"
-                android:hint="38"
-                android:textAlignment="center" />
-
-            <TextView
-                android:id="@+id/tvDurabilityData"
-                android:layout_width="28dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="300dp"
-                android:layout_marginTop="180dp"
-                android:hint="38"
-                android:textAlignment="center" />
-
-            <TextView
-                android:id="@+id/tvPower"
-                android:layout_width="83dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="200dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="210dp"
-                android:gravity="center_vertical"
-                android:hint="Nombre Super Heroe"
-                android:text="Power:"
-                android:textSize="14sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/tvCombat"
-                android:layout_width="83dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="200dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="240dp"
-                android:gravity="center_vertical"
-                android:hint="Nombre Super Heroe"
-                android:text="Combat:"
-                android:textSize="14sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/tvStrength"
-                android:layout_width="83dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="200dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="120dp"
-                android:gravity="center_vertical"
-                android:hint="Nombre Super Heroe"
-                android:text="Strength:"
-                android:textSize="14sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/tvSpeed"
-                android:layout_width="83dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="200dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="150dp"
-                android:gravity="center_vertical"
-                android:hint="Nombre Super Heroe"
-                android:text="Speed:"
-                android:textSize="14sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/tvDurability"
-                android:layout_width="83dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="200dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="180dp"
-                android:gravity="center_vertical"
-                android:hint="Nombre Super Heroe"
-                android:text="Durability:"
-                android:textSize="14sp"
-                android:textStyle="normal" />
-
-            <ImageView
-                android:id="@+id/ivPicSH"
-                android:layout_width="176dp"
-                android:layout_height="230dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="30dp"
-                tools:src="@tools:sample/avatars" />
-
-            <TextView
-                android:id="@+id/tvNomDetail"
-                android:layout_width="170dp"
-                android:layout_height="55dp"
-                android:layout_marginLeft="200dp"
-                android:layout_marginTop="25dp"
-                android:hint="Nombre Super Heroe"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tvAppearance"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="280dp"
-                android:text="Appearance"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tvBiography"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="400dp"
-                android:text="Biography"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tvGender"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="310dp"
-                android:text="Gender:"
-                android:textSize="14sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/tvFullName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="430dp"
-                android:text="Full Name:"
-                android:textSize="14sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/tvAlias"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="460dp"
-                android:text="Aliases:"
-                android:textSize="14sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/tvAlias2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="490dp"
-                android:text="POB:"
-                android:textSize="14sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/tvAlign"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="520dp"
-                android:text="Alignment:"
-                android:textSize="14sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/tvWork"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="550dp"
-                android:text="Occupation:"
-                android:textSize="14sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/tvRace"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="340dp"
-                android:text="Race:"
-                android:textSize="14sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/tvGenderData"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="120dp"
-                android:layout_marginTop="310dp"
-                android:hint="Male"
-                android:textSize="14sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/tvFullNameData"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="120dp"
-                android:layout_marginTop="430dp"
-                android:layout_marginEnd="10dp"
-                android:hint="Richard Milhouse Jones"
-                android:textSize="14sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/tvAliasData"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="120dp"
-                android:layout_marginTop="460dp"
-                android:layout_marginEnd="10dp"
-                android:hint="Rick Jones"
-                android:textSize="14sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/tvAliasData2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="120dp"
-                android:layout_marginTop="490dp"
-                android:layout_marginEnd="10dp"
-                android:hint="Scarsdale, Arizona"
-                android:textSize="14sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/tvAlignData"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="120dp"
-                android:layout_marginTop="520dp"
-                android:layout_marginEnd="10dp"
-                android:hint="Good"
-                android:textSize="14sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/tvWorkData"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="120dp"
-                android:layout_marginTop="550dp"
-                android:layout_marginEnd="10dp"
-                android:hint="Musician, adventurer, author; formerly talk show host"
-                android:textSize="14sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/tvRaceData"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="120dp"
-                android:layout_marginTop="340dp"
-                android:hint="Human"
-                android:textSize="14sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/tvIntelligence"
-                android:layout_width="83dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="200dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="90dp"
-                android:gravity="center_vertical"
-                android:hint="Nombre Super Heroe"
-                android:text="Intelligence:"
-                android:textSize="14sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/tvIntelligenceData"
-                android:layout_width="28dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="300dp"
-                android:layout_marginTop="90.5dp"
-                android:hint="38"
-                android:textAlignment="center" />
-
-            <TextView
-                android:id="@+id/tvStrengthData"
-                android:layout_width="28dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="300dp"
-                android:layout_marginTop="120dp"
-                android:hint="38"
-                android:textAlignment="center" />
-
-            <TextView
-                android:id="@+id/tvSpeedData"
-                android:layout_width="28dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="300dp"
-                android:layout_marginTop="150dp"
-                android:hint="38"
-                android:textAlignment="center" />
-
-            <Button
-                android:id="@+id/btnVolver"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|center_horizontal"
-                android:layout_marginBottom="10dp"
-                android:backgroundTint="#EA1717"
-                android:fontFamily="@font/aclonica"
-                android:text="Volver"
-                android:textColor="#E8201515" />
-        </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="750dp"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="#5BB9E3"
+                    app:cardCornerRadius="30dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.157"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTituloDetail"
+                    app:layout_constraintVertical_bias="0.0">
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <TextView
+                        android:id="@+id/tvWeightData"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="270dp"
+                        android:layout_marginTop="340dp"
+                        android:hint="@string/pesoejemplo"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvHairData"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="370dp"
+                        android:hint="@string/hairEjemplo"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvEyeData"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="270dp"
+                        android:layout_marginTop="370dp"
+                        android:hint="@string/colorEjemplo"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvHeightData"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="270dp"
+                        android:layout_marginTop="310dp"
+                        android:hint="@string/alturaEjemplo"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvWeight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="190dp"
+                        android:layout_marginTop="340dp"
+                        android:text="@string/weight"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvHair"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="370dp"
+                        android:text="@string/hair"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvEye"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="190dp"
+                        android:layout_marginTop="370dp"
+                        android:text="@string/eye"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvHeight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="190dp"
+                        android:layout_marginTop="310dp"
+                        android:text="@string/height"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvCombatData"
+                        android:layout_width="28dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="300dp"
+                        android:layout_marginTop="240dp"
+                        android:hint="@string/combarEjemplo"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/tvPowerData"
+                        android:layout_width="28dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="300dp"
+                        android:layout_marginTop="210dp"
+                        android:hint="@string/combarEjemplo"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/tvDurabilityData"
+                        android:layout_width="28dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="300dp"
+                        android:layout_marginTop="180dp"
+                        android:hint="@string/combarEjemplo"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/tvPower"
+                        android:layout_width="83dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="200dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="210dp"
+                        android:gravity="center_vertical"
+                        android:hint="@string/nombreEjemplo"
+                        android:text="@string/Power"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvCombat"
+                        android:layout_width="83dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="200dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="240dp"
+                        android:gravity="center_vertical"
+                        android:hint="@string/nombreEjemplo"
+                        android:text="@string/combat"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvStrength"
+                        android:layout_width="83dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="200dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="120dp"
+                        android:gravity="center_vertical"
+                        android:hint="@string/nombreEjemplo"
+                        android:text="@string/strength"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvSpeed"
+                        android:layout_width="83dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="200dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="150dp"
+                        android:gravity="center_vertical"
+                        android:hint="@string/nombreEjemplo"
+                        android:text="@string/speed"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvDurability"
+                        android:layout_width="83dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="200dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="180dp"
+                        android:gravity="center_vertical"
+                        android:hint="@string/nombreEjemplo"
+                        android:text="@string/durability"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <ImageView
+                        android:id="@+id/ivPicSH"
+                        android:layout_width="176dp"
+                        android:layout_height="230dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        tools:src="@tools:sample/avatars" />
+
+                    <TextView
+                        android:id="@+id/tvNomDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="200dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginRight="10dp"
+                        android:hint="@string/nombreEjemplo"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvAppearance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="280dp"
+                        android:text="@string/appearance"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvBiography"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="400dp"
+                        android:text="@string/biography"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvGender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="310dp"
+                        android:text="@string/gender"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvFullName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="430dp"
+                        android:text="@string/full_name"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvAlias"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="550dp"
+                        android:text="@string/aliases"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvAlias2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="460dp"
+                        android:text="@string/pob"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvAlign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="490dp"
+                        android:text="@string/alignment"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvPublisher"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="520dp"
+                        android:text="@string/publisher"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvWork"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="610dp"
+                        android:text="@string/occupation"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvRace"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="340dp"
+                        android:text="@string/race"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvGenderData"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="310dp"
+                        android:hint="@string/male"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvFullNameData"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="120dp"
+                        android:layout_marginTop="430dp"
+                        android:layout_marginEnd="10dp"
+                        android:hint="@string/fullNameEjemplo"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvAliasData"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="120dp"
+                        android:layout_marginTop="550dp"
+                        android:layout_marginEnd="10dp"
+                        android:hint="@string/fullNameEjemplo"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvPobData"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="120dp"
+                        android:layout_marginTop="460dp"
+                        android:layout_marginEnd="10dp"
+                        android:hint="@string/PobEjemplo"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvAlignData"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="120dp"
+                        android:layout_marginTop="490dp"
+                        android:layout_marginEnd="10dp"
+                        android:hint="@string/good"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvPublisherData"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="120dp"
+                        android:layout_marginTop="520dp"
+                        android:layout_marginEnd="10dp"
+                        android:hint="@string/pubEjemplo"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvWorkData"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="120dp"
+                        android:layout_marginTop="610dp"
+                        android:layout_marginEnd="10dp"
+                        android:hint="@string/workEjemplo"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvRaceData"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="340dp"
+                        android:hint="@string/raceEjemplo"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvIntelligence"
+                        android:layout_width="83dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="200dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="90dp"
+                        android:gravity="center_vertical"
+                        android:hint="@string/nombreEjemplo"
+                        android:text="Intelligence:"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvIntelligenceData"
+                        android:layout_width="28dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="300dp"
+                        android:layout_marginTop="90.5dp"
+                        android:hint="@string/combarEjemplo"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/tvStrengthData"
+                        android:layout_width="28dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="300dp"
+                        android:layout_marginTop="120dp"
+                        android:hint="@string/combarEjemplo"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/tvSpeedData"
+                        android:layout_width="28dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="300dp"
+                        android:layout_marginTop="150dp"
+                        android:hint="@string/combarEjemplo"
+                        android:textAlignment="center" />
+
+                    <Button
+                        android:id="@+id/btnVolver"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:backgroundTint="#EA1717"
+                        android:fontFamily="@font/aclonica"
+                        android:text="@string/volver"
+                        android:textColor="#E8201515" />
+                </androidx.cardview.widget.CardView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
 </FrameLayout>
 
 </layout>

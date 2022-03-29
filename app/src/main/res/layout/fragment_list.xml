@@ -13,7 +13,7 @@
         android:background="#EA1717"
         android:fontFamily="@font/aclonica"
         android:gravity="center_horizontal|center_vertical"
-        android:text="App de Súper Héroes"
+        android:text="@string/tituloApp"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold" />

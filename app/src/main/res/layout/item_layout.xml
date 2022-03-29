@@ -22,13 +22,13 @@
 
         <TextView
             android:id="@+id/tvNombre"
-            android:layout_width="99dp"
+            android:layout_width="115dp"
             android:layout_height="63dp"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="10dp"
             android:fontFamily="@font/aclonica"
             android:gravity="center_vertical"
-            android:hint="Nombre Super Heroe"
+            android:hint="@string/nombreEjemplo"
             android:textAlignment="center"
             android:textColor="#7219BF"
             android:textColorHighlight="#7219BF"
@@ -38,8 +38,8 @@
 
         <ImageView
             android:id="@+id/ivCard"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="103dp"
+            android:layout_height="115dp"
             android:layout_gravity="right"
             android:layout_margin="15dp"
             tools:srcCompat="@tools:sample/avatars" />
