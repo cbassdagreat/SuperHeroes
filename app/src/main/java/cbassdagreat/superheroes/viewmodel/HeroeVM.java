@@ -23,9 +23,6 @@ public class HeroeVM extends ViewModel {
     private MutableLiveData<SuperHeroe> miSuperHeroe = new MutableLiveData<>();
     public void llamarApi(){
 
-
-
-
         service.getSuperHeroes().enqueue(new Callback<List<SuperHeroe>>() {
             @Override
             public void onResponse(Call<List<SuperHeroe>> call, Response<List<SuperHeroe>> response) {

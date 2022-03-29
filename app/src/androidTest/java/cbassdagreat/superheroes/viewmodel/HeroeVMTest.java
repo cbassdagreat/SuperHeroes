@@ -5,10 +5,19 @@ import static org.mockito.Mockito.verify;
 
 import static java.sql.DriverManager.println;
 
+import androidx.arch.core.executor.testing.InstantTaskExecutorRule;
+import androidx.lifecycle.Observer;
+
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnitRunner;
+
+import java.lang.reflect.Array;
+import java.util.List;
 
 import cbassdagreat.superheroes.modelo.SuperHeroe;
 import cbassdagreat.superheroes.modelo.SuperHeroes;
@@ -16,12 +25,22 @@ import cbassdagreat.superheroes.modelo.SuperHeroes;
 @RunWith(MockitoJUnitRunner.class)
 public class HeroeVMTest {
 
-    private HeroeVM viewModel;
+    @Rule
+    public InstantTaskExecutorRule instantTaskExecutorRule = new InstantTaskExecutorRule();
 
+    @Mock
+    private Observer<SuperHeroe> superHeroeObserver;
+    @Mock
+    private Observer<List<SuperHeroe>> superHeroesObserver;
+    private HeroeVM viewModel;
 
     @Before
     public void setUp() throws Exception {
+        MockitoAnnotations.openMocks(this);
         viewModel = new HeroeVM();
+        viewModel.getMiSuperHeroe().observeForever(superHeroeObserver);
+        viewModel.getMiSuperHeroes().observeForever(superHeroesObserver);
+
     }
 
     @Test
@@ -29,7 +48,15 @@ public class HeroeVMTest {
         viewModel.llamarApi();
         Thread.sleep(3000);
         SuperHeroe sh = viewModel.getMiSuperHeroe().getValue();
-        verify()
+        verify(superHeroesObserver).onChanged(viewModel.getMiSuperHeroes().getValue());
+    }
+
+    @Test
+    public void test_obtener_heroe() throws InterruptedException{
+        viewModel.llamarApi();
+        Thread.sleep(1000);
+        List<SuperHeroe> sh = viewModel.getMiSuperHeroes().getValue();
+        viewModel.obtenerSuperHeroe(sh.get(0));
 
 
     }
